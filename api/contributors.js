@@ -6,7 +6,7 @@ async function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-exports.handler = async (request, response) => {
+module.exports = async (request, response) => {
     const query = new URLSearchParams();
 
     let browser = null, url = null;
