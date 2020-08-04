@@ -6,15 +6,15 @@ async function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-exports.handler = async (event, context, callback) => {
+exports.handler = async (request, response) => {
     const query = new URLSearchParams();
 
-    let response = null,
-        browser = null,
-        url = null;
+    let browser = null, url = null;
 
     try {
-        const { org = 'thinkverse', repo = 'contributors' } = event.queryStringParameters,
+        response.setHeader('Access-Control-Allow-Origin', '*');
+
+        const { org = 'thinkverse', repo = 'contributors' } = request.query,
             hostname = `${process.env.RENDERER_URL}`;
 
         browser = await chromium.puppeteer.launch({
@@ -42,22 +42,13 @@ exports.handler = async (event, context, callback) => {
 
         const image = await (await page.$('#content')).screenshot();
 
-        response = Object.assign({}, response, {
-            headers: { 
-                'Access-Control-Allow-Origin': '*',
-                'Cache-Control': 'public,max-age=604800',
-                'Content-Type': 'image/png', },
-            body: image.toString('base64'),
-            isBase64Encoded: true,
-            statusCode: 200,
-        });
-    } catch (error) {
-        return callback(null, { statusCode: 500, body: error.toString() });
-    } finally {
-        if (browser !== null) {
-            await browser.close();
-        }
-    }
+        response.setHeader('Cache-Control', 'public,max-age=604800');
+        response.setHeader('Content-Type', 'image/png');
 
-    return callback(null, response);
+        response.send(image).status(200);
+        
+        return await page.close() && await browser.close();
+    } catch (error) {
+        return response.status(500).send(error.toString());
+    }
 }
