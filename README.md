@@ -11,13 +11,13 @@ For now it returns the first 30 results, excluding bots, that will be fixed in l
 
 Here's an example using one of my favorite projects [VueJS].
 
-![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org=vuejs&repo=vue)
+[![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org=vuejs&repo=vue)](https://github.com/thinkverse/contributors)
 
 ## Usage 🎉
 
 Paste this markdown in your README.
 
-`![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org={organization}&repo={repository})`
+`[![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org={organization}&repo={repository})](https://github.com/thinkverse/contributors)`
 
 Change `{organization}` and `{repository}` with your information.
 
@@ -37,7 +37,7 @@ yarn global add vercel
 
 Now you will become one of our contributors. 👍
 
-![My amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors)
+[![My amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors)](https://github.com/thinkverse/contributors)
 
 [vuejs]: https://vuejs.org/
 [vercel]: https://vercel.com/download
