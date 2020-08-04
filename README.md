@@ -9,7 +9,7 @@ Here's an example using one of my favorite projects [VueJS].
 
 ![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org=vuejs&repo=vue)
 
-### Usage 🎉
+## Usage 🎉
 
 Paste this markdown in your README.
 
@@ -28,6 +28,10 @@ cp .env.example .env
 ```bash
 yarn global add vercel
 ```
+
+Now you will become one of our contributors. 👍
+
+![My amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors)
 
 [vuejs]: https://vuejs.org/
 [vercel]: https://vercel.com/download
