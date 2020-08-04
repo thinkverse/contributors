@@ -1,7 +1,7 @@
 # Contributions 🎩
 ###### Get an image of your lovely contributors 
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+ [![Visits Badge](https://badges.pufler.dev/visits/thinkverse/contributors)](https://badges.pufler.dev) ![GitHub last commit](https://img.shields.io/github/last-commit/thinkverse/contributors) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![GitHub license](https://img.shields.io/github/license/thinkverse/contributors)](https://github.com/thinkverse/contributors/blob/master/LICENSE.md)
 
 Get an image of your amazing contributors that is perfect for your README. 😀
 
