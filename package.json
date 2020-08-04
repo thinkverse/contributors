@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Get an image list of your contributors",
   "main": "index.js",
-  "scripts": {
-    "start": ""
-  },
   "author": "Kim 'Thinkverse' Hallberg <hallberg.kim@gmail.com>",
   "license": "MIT",
   "private": false,
