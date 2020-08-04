@@ -1,0 +1,20 @@
+{
+  "name": "contributors",
+  "version": "0.0.0",
+  "description": "Get an image list of your contributors",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "author": "Kim 'Thinkverse' Hallberg <hallberg.kim@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "chrome-aws-lambda": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "puppeteer-core": "^5.2.1"
+  },
+  "devDependencies": {
+    "puppeteer": "^5.2.1"
+  }
+}
