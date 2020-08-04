@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    max-width: 838px; /* ?: Max width of GitHub README's */
+}
+
+#contributors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 32px);
+    grid-template-rows: repeat(auto-fill, 32px);
+    grid-gap: 8px;
+}
+
+#contributors img {
+    border-radius: 100%;
+    width: 32px; height: 32px;
+}
