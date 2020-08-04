@@ -15,6 +15,8 @@ Paste this markdown in your README.
 
 `![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org={organization}&repo={repository})`
 
+Change `{organization}` and `{repository}` with your information.
+
 ## Contribute 😎
 
 ```bash
