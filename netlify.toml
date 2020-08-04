@@ -1,7 +1,0 @@
-[build]
-  functions = "functions"
-
-[dev]
-  framework = "#auto"
-  publish = "dist"
-  port = 8888
