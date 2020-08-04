@@ -1,30 +1,30 @@
-const container = document.querySelector('#contributors'),
-    paramaters = new URLSearchParams(window.location.search);
+const container = document.querySelector('#contributors')
+const paramaters = new URLSearchParams(window.location.search)
 
-const repository = paramaters.get('repo') ?? 'git-badges',
-    organization = paramaters.get('org') ?? 'thinkverse';
+const repository = paramaters.get('repo') ?? 'git-badges'
+const organization = paramaters.get('org') ?? 'thinkverse'
 
 const headers = { 'User-Agent': organization }
 
-function renderAvatarImage(source) {
-    let imageTag = document.createElement('img');
-    imageTag.src = source;
+function renderAvatarImage (source) {
+  const imageTag = document.createElement('img')
+  imageTag.src = source
 
-    container.appendChild(imageTag);
+  container.appendChild(imageTag)
 }
 
-async function getContributors(org, repo) {
-    const response = await fetch(`https://api.github.com/repos/${org}/${repo}/contributors?anon=1`, headers);
+async function getContributors (org, repo) {
+  const response = await fetch(`https://api.github.com/repos/${org}/${repo}/contributors?anon=1`, headers)
 
-    return await response.json()
+  return await response.json()
 }
 
 getContributors(organization, repository).then(contributors => {
-    contributors.filter(contributor =>
-        ('login' in contributor && 'avatar_url' in contributor)
-        && !contributor.login.includes('[bot]'))
-        .map(contributor => contributor.avatar_url)
-        .forEach(avatar => renderAvatarImage(avatar));
+  contributors.filter(contributor =>
+    ('login' in contributor && 'avatar_url' in contributor) &&
+        !contributor.login.includes('[bot]'))
+    .map(contributor => contributor.avatar_url)
+    .forEach(avatar => renderAvatarImage(avatar))
 
-    container.classList.add('rendered');
-});
+  container.classList.add('rendered')
+})

@@ -1,5 +1,7 @@
 # Contributions 🎩
-###### Get an image of your lovely contributors
+###### Get an image of your lovely contributors 
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Get an image of your amazing contributors that is perfect for your README. 😀
 
