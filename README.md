@@ -3,6 +3,10 @@
 
 Get an image of your amazing contributors that is perfect for your README. 😀
 
+## Information 🤓
+
+For now it returns the first 30 results, excluding bots, that will be fixed in later versions.
+
 ### Example 🤘
 
 Here's an example using one of my favorite projects [VueJS].
