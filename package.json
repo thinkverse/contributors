@@ -7,8 +7,10 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@aero/centra": "^1.0.4",
     "chrome-aws-lambda": "^5.2.0",
     "dotenv": "^8.2.0",
+    "parse-link-header": "^1.0.1",
     "puppeteer-core": "^5.2.1"
   },
   "devDependencies": {
