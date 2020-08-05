@@ -48,6 +48,7 @@ Now you will become one of our contributors. 👍
 ### Generate full list of avatars 🔥
 
 ⚠️ Un comment the code inside [api/avatars.js](https://github.com/thinkverse/contributors/blob/HEAD/api/avatars.js)
+
 ⚠️ Use at your own risk since it can time out your api.
 
 [vuejs]: https://vuejs.org/
