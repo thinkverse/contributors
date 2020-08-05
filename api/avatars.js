@@ -22,7 +22,7 @@ module.exports = async (request, response) => {
 
     const body = JSON.parse(initial.body.toString())
 
-    if (initial.headers?.link) {
+    if (initial.headers.link) {
       const body = new Array(initial.body.toString())
 
       for (let index = 2; index < parse(initial.headers.link).last.page; index++) {
