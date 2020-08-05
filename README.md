@@ -7,7 +7,7 @@ Get an image of your amazing contributors that is perfect for your README. 😀
 
 ## Information 🤓
 
-For now it returns the first 30 results, excluding bots, that will be fixed in later versions.
+For now the public API only returns the first 30 results, including bots.
 
 ### Example 🤘
 
@@ -31,6 +31,10 @@ cd contributors-dev && yarn install
 cp .env.example .env
 ```
 
+#### Update enviroment variables
+
+Generate your personal token under your GitHub [settings/tokens] and switch the `GITHUB_TOKEN` with that and add your organization/username to `GITHUB_ID`
+
 **Note** You will need some way to run serverless functions locally, this project uses [vercel].
 
 ```bash
@@ -41,5 +45,11 @@ Now you will become one of our contributors. 👍
 
 [![My amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors)](https://github.com/thinkverse/contributors)
 
+### Generate full list of avatars 🔥
+
+⚠️ Un comment the code inside [api/avatars.js](https://github.com/thinkverse/contributors/blob/HEAD/api/avatars.js)
+⚠️ Use at your own risk since it can time out your api.
+
 [vuejs]: https://vuejs.org/
 [vercel]: https://vercel.com/download
+[settings/tokens]: https://github.com/settings/tokens
