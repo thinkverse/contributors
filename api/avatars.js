@@ -37,7 +37,7 @@ module.exports = async (request, response) => {
       const users = { ...body, ...intermediary }
 
       avatars = Object.entries(users).flat(2)
-        .filter(entry => entry?.avatar_url)
+        .filter(entry => entry.avatar_url)
         .map(user => user.avatar_url)
 
       response.setHeader('Content-Type', 'application/json')
@@ -45,7 +45,7 @@ module.exports = async (request, response) => {
     }
 
     avatars = body
-      .filter(entry => entry?.avatar_url)
+      .filter(entry => entry.avatar_url)
       .map(user => user.avatar_url)
 
     response.setHeader('Content-Type', 'application/json')
