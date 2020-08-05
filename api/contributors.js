@@ -38,7 +38,7 @@ module.exports = async (request, response) => {
 
     // ! We need this to wait for all contributors images to be loaded.
     await page.evaluate(() => { window.scrollBy(0, window.innerHeight) })
-    await timeout(5000)
+    await timeout(3000)
 
     const image = await (await page.$('#content')).screenshot()
 
