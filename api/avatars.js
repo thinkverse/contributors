@@ -1,4 +1,4 @@
-const parse = require('parse-link-header')
+// const parse = require('parse-link-header')
 const centra = require('@aero/centra')
 
 require('dotenv').config()
@@ -9,7 +9,7 @@ module.exports = async (request, response) => {
     'User-Agent': 'thinkverse'
   }
 
-  const intermediary = []
+  // const intermediary = []
   let avatars = {}
 
   try {
@@ -22,27 +22,27 @@ module.exports = async (request, response) => {
 
     const body = JSON.parse(initial.body.toString())
 
-    if (initial.headers.link) {
-      const body = new Array(initial.body.toString())
+    // if (initial.headers.link) {
+    //   const body = new Array(initial.body.toString())
 
-      for (let index = 2; index < parse(initial.headers.link).last.page; index++) {
-        const next = await centra(`https://api.github.com/repos/${org}/${repo}/contributors?per_page_100&page=${index}`)
-          .header(headers).json()
+    //   for (let index = 2; index < parse(initial.headers.link).last.page; index++) {
+    //     const next = await centra(`https://api.github.com/repos/${org}/${repo}/contributors?per_page_100&page=${index}`)
+    //       .header(headers).json()
 
-        intermediary.push(next)
-      }
+    //     intermediary.push(next)
+    //   }
 
-      intermediary.flat()
+    //   intermediary.flat()
 
-      const users = { ...body, ...intermediary }
+    //   const users = { ...body, ...intermediary }
 
-      avatars = Object.entries(users).flat(2)
-        .filter(entry => entry.avatar_url)
-        .map(user => user.avatar_url)
+    //   avatars = Object.entries(users).flat(2)
+    //     .filter(entry => entry.avatar_url)
+    //     .map(user => user.avatar_url)
 
-      response.setHeader('Content-Type', 'application/json')
-      return response.send(avatars).status(200)
-    }
+    //   response.setHeader('Content-Type', 'application/json')
+    //   return response.send(avatars).status(200)
+    // }
 
     avatars = body
       .filter(entry => entry.avatar_url)
