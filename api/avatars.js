@@ -17,7 +17,7 @@ module.exports = async (request, response) => {
 
     const { org = 'thinkverse', repo = 'contributors' } = request.query
 
-    const initial = await centra(`https://api.github.com/repos/${org}/${repo}/contributors?per_page_100`)
+    const initial = await centra(`https://api.github.com/repos/${org}/${repo}/contributors?per_page=100`)
       .header(headers).send()
 
     const body = JSON.parse(initial.body.toString())
@@ -26,7 +26,7 @@ module.exports = async (request, response) => {
     //   const body = new Array(initial.body.toString())
 
     //   for (let index = 2; index < parse(initial.headers.link).last.page; index++) {
-    //     const next = await centra(`https://api.github.com/repos/${org}/${repo}/contributors?per_page_100&page=${index}`)
+    //     const next = await centra(`https://api.github.com/repos/${org}/${repo}/contributors?per_page=100&page=${index}`)
     //       .header(headers).json()
 
     //     intermediary.push(next)
