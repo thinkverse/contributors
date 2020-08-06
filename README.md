@@ -13,7 +13,7 @@ For now the public API only returns the first 100 results, including bots.
 
 Here's an example using one of my favorite projects [VueJS].
 
-[![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org=vuejs&repo=vue)](https://github.com/thinkverse/contributors)
+[![VueJS's amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org=vuejs&repo=vue)](https://github.com/thinkverse/contributors)
 
 ## Usage 🎉
 
