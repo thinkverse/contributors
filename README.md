@@ -7,7 +7,7 @@ Get an image of your amazing contributors that is perfect for your README. 😀
 
 ## Information 🤓
 
-For now the public API only returns the first 30 results, including bots.
+For now the public API only returns the first 100 results, including bots.
 
 ### Example 🤘
 
