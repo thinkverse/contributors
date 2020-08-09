@@ -14,7 +14,7 @@ module.exports = async (request, response) => {
   try {
     response.setHeader('Access-Control-Allow-Origin', '*')
 
-    const { org = 'thinkverse', repo = 'contributors' } = request.query
+    const { org = 'thinkverse', repo = 'contributors', bots = 'true' } = request.query
     const hostname = `${process.env.RENDERER_URL}`
 
     browser = await chromium.puppeteer.launch({
@@ -28,6 +28,7 @@ module.exports = async (request, response) => {
     const page = await browser.newPage()
 
     query.set('repo', repo)
+    query.set('bots', bots)
     query.set('org', org)
 
     url = `${hostname}?${query.toString()}`

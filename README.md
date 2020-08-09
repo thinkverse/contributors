@@ -1,4 +1,4 @@
-# Contributions 🎩
+# Contributors 🎩
 ###### Get an image of your lovely contributors 
 
  [![Visits Badge](https://badges.pufler.dev/visits/thinkverse/contributors)](https://badges.pufler.dev) ![GitHub last commit](https://img.shields.io/github/last-commit/thinkverse/contributors) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![GitHub license](https://img.shields.io/github/license/thinkverse/contributors)](https://github.com/thinkverse/contributors/blob/master/LICENSE.md)
@@ -22,6 +22,15 @@ Paste this markdown in your README.
 `[![Our amazing contributors](https://contributors.thinkverse.vercel.app/api/contributors?org={organization}&repo={repository})](https://github.com/thinkverse/contributors)`
 
 Change `{organization}` and `{repository}` with your information.
+
+#### Parameters 👏
+
+- `org` - Your organization e.g. `vuejs`
+- - default : `thinkverse`
+- `repo` - Your repository e.g. `vue`
+- - default : `contributors`
+- `bots` - Include bots? e.g. `false`
+- - default : `true`
 
 ## Contribute 😎
 
