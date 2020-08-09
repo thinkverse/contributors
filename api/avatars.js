@@ -15,7 +15,7 @@ module.exports = async (request, response) => {
   try {
     response.setHeader('Access-Control-Allow-Origin', '*')
 
-    const { org = 'thinkverse', repo = 'contributors' } = request.query
+    const { org = 'thinkverse', repo = 'contributors', bots = 'true' } = request.query
 
     const initial = await centra(`https://api.github.com/repos/${org}/${repo}/contributors?per_page=100`)
       .header(headers).send()
@@ -37,6 +37,7 @@ module.exports = async (request, response) => {
     //   const users = { ...body, ...intermediary }
 
     //   avatars = Object.entries(users).flat(2)
+    //     .filter(entry => (bots === 'true') ? entry : entry.type === 'User')
     //     .filter(entry => entry.avatar_url)
     //     .map(user => user.avatar_url)
 
@@ -45,6 +46,7 @@ module.exports = async (request, response) => {
     // }
 
     avatars = body
+      .filter(entry => (bots === 'true') ? entry : entry.type === 'User')
       .filter(entry => entry.avatar_url)
       .map(user => user.avatar_url)
 
